@@ -12,7 +12,7 @@
     <% if @component.component_stubs? %>
       <% @component.component_stubs.each_with_index do |component_properties, index| %>
           <div class="mv-component">
-            <div class="mv-component__item">
+            <div class="mv-component__item <%= @component.name %>">
               <%= render_component @component.name, component_properties.clone %>
             </div>
             <div class="mv-component__description">
